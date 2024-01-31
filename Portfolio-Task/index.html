@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portflio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <meta name="description" content="Portfolio of Kaushal Kishore">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+
+    <!-- Landing Component Starts -->
+
+    <header>
+        <div class="logo">
+            <h2>Portfolio</h2>
+        </div>
+        <div class="navlinks">
+            <nav>
+                <ul>
+                    <li><a href="#Home" class="active1">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="mode" onclick="colorMode()"><i onclick="modeIcon(this)" class='bx bxs-sun'></i></div>
+            <div id="menu" onclick="menuSidebar()"><i onclick="menuIcon(this)" class='bx bx-menu'></i></div>
+        </div>
+    </header>
+    <!-- Moible Menu sidebar -->
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#Home" class="active1">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="hero-component" id="Home">
+        <div class="hero-content">
+            <aside class="context">
+                <h2>Hello It's Me</h2>
+                <h2 id="my-name">Kaushal Kishore</h2>
+                <h2>And I'm <span id="textline"></span></h2>
+                <p class="hero-desc"> Hi there, I'm passionate Front-End Developer and GCP Cloud Enthusiast.</p>
+                <div class="link-box">
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/kaushal-kishore-b373111a8/" target="_blank" title="Linkedin" ><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/KaushalSonic" target="_blank" title="GitHub" ><i class='bx bxl-github'></i></a>
+                        <a href="https://discord.com/invite/kaushalsonic-is-my-id" target="_blank" title="Discord" ><i class='bx bxl-discord-alt'></i></a>
+                    </div>
+                    <a href="./assets/Resume.pdf" download="Resume.pdf" class="btn">Download CV</a>
+                </div>
+            </aside>
+            <aside class="profile-section">
+                <div class="profile-pic">
+                    <img src="./assets/profile.png" alt="profile">
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Landing Component Ends -->
+
+    <div class="section-divider"></div>
+    
+    <!-- About Component Starts -->
+
+    <div class="about-layout" id="About">
+        <div class="about-container">
+            <aside class="profile-section">
+                <div class="profile-pic about-profile">
+                    <img src="./assets/profile.png" alt="profile">
+                </div>
+            </aside>
+            <aside class="about-context">
+                <h1>About <span class="section-heading-color">Me</span></h1>
+                <h2>Front-End Developer</h2>
+                <p>Hi I am working as a Front-end Developer Intern in Coders Cave and I love to build responsive frontend projects. I have done my BCA with 8.02 CGPA from BBMKU, Dhanbad in 2022. </p>
+                <br>
+                <p>Also I am a GCP enthusiast and am walking on the path of MERN stack little by little, exploring more in front-end path by visualizing, reverse engineering of layouts and its components and building projects.</p>
+                <br>
+                <div id="more-details">
+                    <p><b>My skills are:</b></p>
+                    <br>
+                    <p><i>HTML5, CSS3, JavaScript, C, C++, GCP, CorelDraw  </i></p>
+                    <br>
+                    <p><b>Tools I use:</b></p>
+                    <br>
+                    <p><i>VS Code, Git, GitHub, Postman, Chrome DevTools, W3C Validator, PageSpeed Insights </i></p>
+                </div>
+                <button onclick="details()" class="btn">Read More</button>
+            </aside>
+        </div>
+    </div>
+
+    <!-- About Component Ends  -->
+
+    <div class="section-divider"></div>
+
+    <!-- Project Component Starts -->
+
+    <div class="project-layout"  id="Projects">
+        <div class="project-component">
+            <h1>Recent <span class="section-heading-color">Projects</span></h1>
+            <aside class="project-container">
+                <div class="project">
+                    <img src="./assets/netflix.png" alt="Netflix Clone Project">
+                    <div class="project-details">
+                        <h2>Netflix-Clone</h2>
+                        <p>A simple landing page clone of <b>Netflix India</b> which is fully responsive across devices.</p>
+                        <a href="https://github.com/KaushalSonic/netflix-clone-landingPage" class="btn project-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./assets/indian-flag.png" alt="Indian Flag Project">
+                    <div class="project-details">
+                        <h2>Indian Flag</h2>
+                        <p>An interactive mini project of Indian Flag with rotating ashoka chakara &amp; national anthem playing in the background. </p>
+                        <a href="https://github.com/KaushalSonic/Indian-flag" class="btn project-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./assets/rainbow-border.png" alt="Rainbow border project">
+                    <div class="project-details">
+                        <h2>Rainbow Border</h2>
+                        <p>A mini project of Rainbow Border which is a rotating border of vibrant breathing colors made with a single div.</p>
+                        <a href="https://github.com/KaushalSonic/Rainbow-boder" class="btn project-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./assets/rotating-ludo.png" alt="Rotating Ludo Project">
+                    <div class="project-details">
+                        <h2>Rotating Ludo</h2>
+                        <p>Built a mini project of rotating ludo which it's dices are rotating across the viewport of the screen. </p>
+                        <a href="https://github.com/KaushalSonic/Rotating-Ludo" class="btn project-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./assets/hireMe-button.png" alt="HireMe Button">
+                    <div class="project-details">
+                        <h2>HireMe Button</h2>
+                        <p>Built a mini project of buttons which is a set of interactive desing buttons. </p>
+                        <a href="https://github.com/KaushalSonic/HireME-btn" class="btn project-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./assets/teacher-day.png" alt="Teacher's Day Project">
+                    <div class="project-details">
+                        <h2>Teacher's Day</h2>
+                        <p>An experimental mini project of Teacher's Day celebration which I added photo from my personal Google Drive. </p>
+                        <a href="https://github.com/KaushalSonic/Teacher-s_Day" class="btn project-btn" target="_blank">Visit</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Project Component Ends  -->
+
+    <div class="section-divider"></div>
+
+    <!-- Contact Component Starts -->
+
+    <div class="contact-layout" id="Contact">
+        <div class="contact-component">
+            <h1>Contact <span class="section-heading-color">Me</span></h1>
+            <div class="form-content">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="befc9212-e96f-45bd-9f06-62ec8f0b4d5a">
+            
+                    <input type="text" name="name" placeholder="Full Name">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                    <button type="submit" class="btn form-btn">Send Me</button>
+                
+                </form>
+            </div>            
+        </div>
+    </div>
+
+    <!-- Contact Component Ends  -->
+
+    <div class="section-divider"></div>
+
+    <!-- Footer Component Starts -->
+
+    <footer>
+        <p>&#169; Copyright All Rights Reserved</p>
+        <h3>Made <i class='bx bxs-heart'></i> with KaushalSonic.<span>design</span></h3>
+    </footer>
+    
+    <!-- Footer Component Ends -->
+
+</body>
+</html>

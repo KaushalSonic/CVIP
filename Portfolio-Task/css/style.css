@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Predefined Color Pallete */
+
+:root{
+    --primary-color: #FF9800;
+    --neutral: #040d12;
+    --neutral2: #111111;
+    --text-color: #FFF;
+    --acent-color: #232323;
+    --form-color1: #040d12;
+    --form-color2: #232323;
+}
+
+.light-mode{
+    --primary-color: #7743DB;
+    --neutral: #FFF8E3;
+    --neutral2: #DCFFB7;
+    --text-color: #000;
+    --acent-color: #E6A4B4;
+    --form-color1: #DCFFB7;
+    --form-color2: #FFF8E3;
+}
+
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background-color: var(--neutral);
+}
+
+/* Landing Component Starts ... */
+
+header{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 9rem;
+    border-bottom:1px solid var(--acent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutral);
+    z-index: 10;
+}
+.logo{
+    color: var(--text-color) ;
+}
+.navlinks{
+    display: flex;
+}
+header nav{
+    display: grid;
+    place-items: center;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 3rem;
+}
+nav ul li a{
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.5s ease;
+    color: var(--text-color);
+}
+nav a:hover, nav a.active1{
+    color: var(--primary-color);
+}
+#mode{
+    color: var(--text-color);
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+#menu{
+    display: none;
+}
+#mode:hover{
+    color: var(--primary-color);
+}
+#menu:hover{
+    color: var(--primary-color);
+}
+#sidebar{
+    display: none;
+}
+
+.hero-component{
+    width: 100%;
+    height: 36.2rem;
+    margin-top: 3.32rem;
+    padding: 0 9rem;
+    display: grid;
+    place-items: center;
+}
+.hero-content{
+    width: 100%;
+    display: flex;
+}
+.context{
+    width: 50%;
+}
+.context h2{
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.context #my-name{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.context h2 span{
+    color: var(--primary-color);
+}
+.hero-desc{
+    color: var(--text-color);
+}
+.link-box{
+    display: inline-block;
+    text-align: left;
+}
+.social-media{
+    display: flex;
+    margin-top: 1.5rem;
+}
+.social-media a{
+    border-radius: 50%;
+    border: 1px solid var(--primary-color) ;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+    color: var(--primary-color);
+    transition: 0.5s ease;
+}
+.social-media .bx{
+    font-size: 1.4rem;
+}
+.social-media a:hover{
+    background-color: var(--primary-color);
+    color: var(--neutral);
+    box-shadow: 
+    0px 0px 10px 1px  var(--primary-color);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1.5rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--primary-color);
+    color: var(--neutral);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0px 0px 10px 4px  var(--primary-color);
+}
+
+.profile-section{
+    width: 50%;
+    display: grid;
+    place-items: center;
+}
+.profile-pic{
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    box-shadow: 
+    0px 0px 10px 8px  var(--primary-color),
+    0px 0px 30px 15px  var(--primary-color);
+    animation: slideUp 5s ease-in-out infinite;
+}
+.profile-pic img{
+    width: 100%;
+}
+@keyframes slideUp{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-0.8rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.section-divider{
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--acent-color);
+}
+
+/* Landing Component Ends ... */
+
+/* About Component Starts ... */
+
+.about-layout{
+    width: 100%;
+    padding: 0 9rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--neutral2);
+}
+.about-container{
+    margin: 3rem 0;
+    width: 100%;
+    display: flex;
+}
+.about-container .profile-section .about-profile{
+    animation: none;
+}
+.about-context{
+    width: 50%;
+}
+.about-context h1{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+.about-context h2{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+
+}
+.about-context p{
+    color: var(--text-color);
+}
+.section-heading-color{
+    color: var(--primary-color);
+}
+#more-details{
+    display: none;
+}
+
+/* About Component Ends ... */
+
+/* ---------------------------------------- */
+
+/* Project Component Starts */
+
+.project-layout{
+    width: 100%;
+    padding: 0 9rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--neutral2);
+
+}
+.project-component{
+    margin: 3rem 0;
+    width: 100%;
+    text-align: center;
+}
+.project-component h1{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+.project-container{
+    margin-top: 3rem;
+    width: 100%;
+    height: 22rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+}
+.project-container .project{
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 2px var(--neutral);
+    border: 2px solid var(--acent-color);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border 0.5s ease;
+}
+.project:hover{
+    border: 2px solid var(--primary-color);
+}
+.project img{
+    object-fit: cover;
+    width: 100%;
+}
+.project .project-details{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--neutral);
+    display: none;
+}
+.project:hover .project-details{
+    display: block;
+}
+.project-details{
+    padding: 1rem;
+    text-align: center;
+}
+.project-details h2{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.project-details p{
+    color: var(--text-color);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    line-height: 1.05rem;
+}
+.project-details .project-btn{
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+.project-btn:hover{
+    box-shadow: 0px 0px 5px 2px  var(--primary-color);
+}
+.project:nth-child(2) img{
+    transform: scale(1.2);
+}
+.project:nth-child(5) .project-btn{
+    margin-top: 2rem;
+}
+
+/* Project Component Ends */
+
+/* ------------------------------------------- */
+
+/* Contact Component Starts */
+
+.contact-layout{
+    width: 100%;
+    padding: 0 9rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--form-color1);
+}
+.contact-component{
+    margin: 4rem 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.contact-component h1{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+.form-content{
+    margin-top: 3rem;
+    width: 60%;
+    text-align: center;
+}
+form input, form textarea{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    background-color: var(--form-color2);
+    transition: border 0.1s ease;
+
+}
+form input:focus, form textarea:focus{
+    border: 1px solid var(--primary-color);
+}
+form textarea{
+    padding: 1rem;
+    resize: none;
+    height: 10rem;
+}
+form .form-btn{
+    padding: 0.8rem 3rem;
+}
+.h-captcha{
+    text-align: center;
+}
+
+/* Project Component Ends */
+
+/* ------------------------------------------- */
+
+/* Footer Component Starts */
+
+footer{
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+    background-color: var(--neutral);
+}
+footer p{
+    font-size: 0.8rem;
+    color: var(--text-color);   
+}
+footer h3{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+footer span{
+    color: var(--primary-color);
+}
+
+/* Footer Component Ends */
+
+/* ------------------------------------------- */
+
+/* For Making Responsiveness Layouts */
+
+@media screen and (max-width: 1279px){
+    /* Landing Component */
+
+    header{
+        padding: 0.8rem 2rem;
+    }
+    .hero-component{
+        padding: 0rem 2rem;
+    }
+
+    /* About Component */
+    
+    .about-layout{
+        padding: 0 2rem;
+    }
+
+    /* Project Component */
+
+    .project-layout{
+        padding: 0 2rem;
+    }
+
+    /* Contact Component */
+
+    .contact-layout{
+        padding: 0 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 960px){
+    /* Landing Component */
+
+    .hero-component{
+        height: 29rem;
+    }
+    nav ul li{
+        margin-right: 1.5rem;
+    }
+    .profile-pic{
+        width: 10rem;
+        height: 10rem;
+    }
+    .context h2{
+        font-size: 1.2rem;
+    }
+    .context #my-name{
+        font-size: 2rem;
+    }
+    .context p{
+        font-size: 0.9rem;
+    }
+
+    /* About Component */
+
+    .about-context h1{
+        font-size: 2rem;
+    }
+    .about-context h2{
+        font-size: 1.2rem;
+    }
+    .about-context p{
+        font-size: 0.9rem;
+    }
+
+    /* Project Component */
+
+    .project-component h1{
+        font-size: 2rem;
+    }
+    .project-container{
+        margin-top: 3rem;
+        height: 40rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 1.2rem;
+        column-gap: 1.2rem;
+    }
+    .project{
+        height: 24vw;
+    }
+    .project-details{
+        padding: 1.5rem;
+    }
+    .project-details h2{
+        font-size: 1.35rem;
+    }
+    .project-details p{
+        font-size: 0.8rem;
+        margin-top: 0.85rem;
+    }
+    .project:nth-child(1) .project-btn{
+        margin-top: 1rem;
+    }
+
+    /* Contact Component */
+
+    .contact-component h1{
+        font-size: 2rem;
+    }
+    .form-content{
+        width: 65%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    /* Landing Component */
+
+    header{
+        padding: 0.8rem 1rem;
+    }
+    .navlinks nav{
+        display: none;
+    }
+    #mode{
+        font-size: 2.2rem;
+    }
+    #menu{
+        color: var(--text-color);
+        display: grid;
+        place-items: center;
+        font-size: 2.8rem;
+        cursor: pointer;
+        transition: color 0.5s ease;
+        margin-left: 1rem;
+    }
+    #sidebar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-top: 4.4rem;
+        width: 100%;
+        padding: 1rem 0;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        z-index: 10;
+    }
+    #sidebar nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #sidebar nav ul li{
+        margin: 0.7rem 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    #sidebar .active1{
+        color: var(--text-color);
+    }
+    .hero-component{
+        height: 36.7rem;
+        padding: 0 1.5rem;
+        display: block;
+    }
+    .hero-content{
+        flex-direction: column;
+    }
+    .context{
+        width: auto;
+        order: 1;
+        text-align: center;
+    }
+    .profile-section{
+        width: auto;
+        order: 0;
+    }
+    .profile-pic{
+        margin: 4.2rem 0;
+    }
+    .context h2{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .context #my-name{
+        font-size: 2rem;
+    }
+    .context p{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .link-box{
+        padding-left: 1.5rem;
+    }
+
+    /* About Component */
+
+    .about-layout{
+        padding: 0 1.5rem;
+        height: auto;
+    }
+    .about-container .profile-section{
+        display: none;
+    }
+    .about-context{
+        text-align: center;
+        width: auto;
+    }
+    .about-context h1{
+        font-size: 2rem;
+    }
+    .about-context h2{
+        font-size: 1rem;
+    }
+    .about-context p{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+     
+    /* Project Component */
+
+    .project-layout{
+        padding: 0 1.5rem;
+        height: auto;
+    }
+    .project-container{
+        margin-top: 3rem;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 2.5rem;
+        column-gap: 0rem;
+    }
+    .project{
+        height: 45vw;
+    }
+    .project-details{
+        padding: 1rem;
+    }
+    .project-details h2{
+        font-size: 1.35rem;
+    }
+    .project-details p{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .project:nth-child(1) .project-btn{
+        margin-top: 1rem;
+    }
+    .project:nth-child(5) .project-btn{
+        margin-top: 1.75rem;
+    }
+    .project .project-btn{
+        margin-top: 0.75rem;
+    }
+
+    /* Contact Component */
+
+    .contact-layout{
+        padding: 0 1.5rem;
+    }
+    .contact-component{
+        margin: 3rem 0;
+    }
+    .form-content{
+        width: 100%;
+    }
+
+    /* Footer Component */
+
+    .footer h3{
+        font-size: 0.8rem;
+    }
+}
+
